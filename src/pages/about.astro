@@ -1,4 +1,9 @@
 ---
+// ---(コードフェンス): スクリプトを記述
+
+// importするだけでページ全体にstyleが適用される
+import "../styles/global.css";
+
 // 型定義
 type Identity = {
   firstName: string;
@@ -26,15 +31,34 @@ const skills: string[] = [
 const happy: boolean = true;
 const finished: boolean = false;
 const goal: number = 3;
+
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <html lang="en">
   <head>
+    <!-- frontmatter: メタデータ(JSON, YAML, TOML形式で記述可能) -->
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <!-- Astro独自のstyleタグで個々にスタイルを設定できる -->
+    <!-- styleタグはfrontmatterスクリプトから任意の変数を参照できる -->
+    <style define:vars={{ skillColor }}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      /* classにstyleを設定することもできる */
+      .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+      }
+    </style>
   </head>
   <body>
     <!-- ナビゲーションリンク -->
@@ -70,7 +94,7 @@ const goal: number = 3;
     </ul>
     <p>My skills are:</p>
     <ul>
-      {skills.map((skill) => <li>{skill}</li>)}
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
     <!-- Astro のテンプレート構文は、JSX 構文に似ています。 -->
     {happy && <p>I am happy to be learning Astro!</p>}
