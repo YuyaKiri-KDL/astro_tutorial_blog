@@ -1,3 +1,7 @@
+# Astro Official Tutorial: Blog
+
+This application is Astro's introductory blog tutorial.
+
 # Astro Starter Kit: Minimal
 
 ```
