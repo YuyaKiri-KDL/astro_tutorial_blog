@@ -3,6 +3,7 @@
 
 // importするだけでページ全体にstyleが適用される
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 
 // 型定義
 type Identity = {
@@ -47,7 +48,7 @@ const textCase = "uppercase";
     <title>{pageTitle}</title>
     <!-- Astro独自のstyleタグで個々にスタイルを設定できる -->
     <!-- styleタグはfrontmatterスクリプトから任意の変数を参照できる -->
-    <style define:vars={{ skillColor }}>
+    <style define:vars={{ skillColor, fontWeight, textCase }}>
       h1 {
         color: purple;
         font-size: 4rem;
@@ -62,9 +63,10 @@ const textCase = "uppercase";
   </head>
   <body>
     <!-- ナビゲーションリンク -->
-    <a href="/">Home</a>
+    <!-- <a href="/">Home</a>
     <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <a href="/blog/">Blog</a> -->
+    <Navigation />
     <!--　本文 -->
     <h1>{pageTitle}</h1>
     <h2>... and my new Astro site!</h2>

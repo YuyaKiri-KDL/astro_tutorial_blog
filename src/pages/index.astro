@@ -3,6 +3,7 @@
 
 // importするだけでページ全体にstyleが適用される
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 
 const pageTitle: string = "My Astro Site";
 ---
@@ -18,9 +19,11 @@ const pageTitle: string = "My Astro Site";
   <body>
     <!-- ナビゲーションリンク -->
     <!--Note: 多くのフレームワークとは異なり、Astro は標準の HTML<a>要素を使用してページ間を移動し (ルートとも呼ばれます)、従来のページの更新を行います。 -->
-    <a href="/">Home</a>
+    <!-- <a href="/">Home</a>
     <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <a href="/blog/">Blog</a> -->
+    <!-- importしたcomponentを設置 -->
+    <Navigation />
     <!-- 本文 -->
     <h1>{pageTitle}</h1>
   </body>

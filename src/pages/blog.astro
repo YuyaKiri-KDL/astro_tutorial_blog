@@ -3,6 +3,7 @@
 
 // importするだけでページ全体にstyleが適用される
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 
 const pageTitle: string = "My Astro Learning Blog";
 ---
@@ -17,9 +18,10 @@ const pageTitle: string = "My Astro Learning Blog";
   </head>
   <body>
     <!-- ナビゲーションリンク -->
-    <a href="/">Home</a>
+    <!-- <a href="/">Home</a>
     <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <a href="/blog/">Blog</a> -->
+    <Navigation />
     <!-- 本文 -->
     <h1>{pageTitle}</h1>
     <p>This is where I will post about my journey learning Astro.</p>
