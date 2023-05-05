@@ -1,9 +1,10 @@
 ---
 // ---(コードフェンス): スクリプトを記述
 
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 // importするだけでページ全体にstyleが適用される
 import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
 
 const pageTitle: string = "My Astro Learning Blog";
 ---
@@ -31,5 +32,7 @@ const pageTitle: string = "My Astro Learning Blog";
       <li><a href="/posts/post-2/">Post 2</a></li>
       <li><a href="/posts/post-3/">Post 3</a></li>
     </ul>
+    <!-- フッター -->
+    <Footer />
   </body>
 </html>
