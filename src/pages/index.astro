@@ -1,39 +1,10 @@
 ---
 // ---(コードフェンス): スクリプトを記述
-
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-// importするだけでページ全体にstyleが適用される
-import "../styles/global.css";
-
-const pageTitle: string = "My Astro Site";
+// レイアウトをimport
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle: string = "Home Page";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <!-- ナビゲーションリンク -->
-    <!--Note: 多くのフレームワークとは異なり、Astro は標準の HTML<a>要素を使用してページ間を移動し (ルートとも呼ばれます)、従来のページの更新を行います。 -->
-    <!-- <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a> -->
-    <!-- importしたcomponentを設置 -->
-    <!-- <Navigation /> -->
-    <!-- ナビゲーションリンクを含むヘッダー -->
-    <Header />
-    <!-- 本文 -->
-    <h1>{pageTitle}</h1>
-    <!-- フッター -->
-    <Footer />
-    <!-- スクリプト -->
-    <script>
-      import "../scripts/menu";
-    </script>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <h2>My Astro Tutorial Blog</h2>
+</BaseLayout>
