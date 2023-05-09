@@ -4,7 +4,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const pageTitle: string = "My Astro Learning Blog";
-// blog.astroの全てのMarkdownファイルに関する情報を取得
+// 任意のディレクトリの全てのMarkdownファイルに関する情報を取得
 const allPosts = await Astro.glob("../pages/posts/*.md");
 ---
 
