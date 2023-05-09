@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: "My First Blog Post"
 pubDate: 2022-07-01
 description: "This is the first post of my new Astro blog."
@@ -10,10 +11,6 @@ tags: ["astro", "blogging", "learning in public"]
 ---
 
 <!-- NOTE: コード フェンス内のファイルの上部にある情報は、frontmatter と呼ばれます。タグや投稿画像を含むこのデータは、Astro が使用できる投稿に関する情報です。ページに自動的に表示されるわけではありませんが、チュートリアルの後半でアクセスして、サイトを強化します。 -->
-
-# My First Blog Post
-
-Published on: 2022-07-01
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
