@@ -12,9 +12,10 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@astrojs/image": "^0.16.9",
     "@astrojs/preact": "^2.1.0",
     "@astrojs/rss": "^2.4.1",
-    "astro": "^2.3.2",
+    "astro": "^2.5.0",
     "preact": "^10.6.5"
   },
   "devDependencies": {

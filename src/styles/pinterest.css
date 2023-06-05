@@ -1,0 +1,15 @@
+.container-break-inside {
+  column-count: 3; /* こいつが肝 */
+  height: auto !important; /* 検証として高さは可変（auto）に設定しているだけです。実際は不要です。 */
+  color: "red";
+}
+.container-break-inside > div {
+  height: auto !important; /* 検証として高さは可変（auto）に設定しているだけです。実際は不要です。 */
+  break-inside: avoid; /* こいつが肝 */
+  margin: 0 0 10px;
+  background-color: rgb(239, 201, 145);
+  color: #fff;
+  padding: 0.5em 1em;
+  word-wrap: break-word;
+  border-radius: 10px;
+}

@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/pinterest.css";
+
+const pageTitle: string = "Lesson";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Like Pinterest</h2>
+  <p>This page is like Pinterest only with css.</p>
+  <!-- Pinterest風コンテンツ -->
+  <div class="container-break-inside">
+    <div class="item1">
+      <!-- publicフォルダ内の画像を表示 -->
+      <img src="/public/animal.jpeg" alt="" width="230" />
+      <p>publicフォルダ内の画像を表示</p>
+    </div>
+    <div class="item2">
+      <!-- リモートの画像を表示 -->
+      <img src="http://placehold.it/230x300" alt="" />
+      <p>リモートの画像を表示</p>
+    </div>
+    <div class="item3">
+      <img src="http://placehold.it/230x330" alt="" />
+      <p>
+        クラフトビール飲み比べはいいね！ こちら久しく伺えてないお店でした。
+        今回友人夫妻と４人で・・友人も前はよく通るが何時もいっぱいでまだ伺った事がないとの事・・
+      </p>
+    </div>
+    <div class="item4">
+      <img src="http://placehold.it/230x300" alt="" />
+      <p>
+        一見だとすこぶる入りづらい！
+        ビル2階の小さな扉！雑居ビルほど名店がある。という私の持論を立証するお店の一つ、エジプト料理「ジーナ」。神戸・北野坂の中腹「象ビルヂング」という、ちょっと怪しげなバーやスナックが入居する建物。
+      </p>
+    </div>
+    <div class="item5">
+      <img src="http://placehold.it/230x300" alt="" />
+      <p>
+        庶民的な店内ですが居心地が良く美味しい！ 初めてお邪魔しました。
+        東京から娘がお友達を連れての帰省
+        「美味しい焼肉が食べたい」とリクエストを受け、迷いに迷いこちらのお店にきめました。
+      </p>
+    </div>
+    <div class="item6">
+      <img src="http://placehold.it/230x150" alt="" />
+      <p>
+        目の前でライブ感溢れる演出､旬の素材を生かした絶品のコース料理
+        JR三ノ宮駅から西、神戸サウナの南側にあるお寿司屋さん。
+      </p>
+    </div>
+    <div class="item7">
+      <img src="http://placehold.it/230x150" alt="" />
+      <p>
+        夕食は軽く・・！ 家内と二人で・・今日は何を頂くか？？
+        居酒屋さんで軽く・・「和心　こざる」さん「なん天」さん・・前日は「申虎」さんお肉とお野菜を・・洋食屋ナカムラさんでビフカツ、シーフード等とビール、〆オムライスをの提案を・・これは家内に即却下！
+        そこでふらり散策しながらお店探しをする事に・・
+      </p>
+    </div>
+    <div class="item8">
+      <img src="http://placehold.it/230x180" alt="" />
+      <p>
+        【淡路鶏の鶏から揚げの南蛮定食 自家製タルタルソース】
+        神戸市中央区八幡通4丁目、フラワーロードの神戸市役所前交差点から東へ入った最初の交差点角のビル中2階にある淡路鶏を使用した鶏料理がメインの居酒屋です。
+      </p>
+    </div>
+    <div class="item9">
+      <img src="http://placehold.it/230x250" alt="" />
+      <p>
+        【北野に佇む隠れ家一軒家】
+        週末の１８：００にビジネスディナーで利用しました。神戸の観光地、北野にある日本料理屋さんです。
+      </p>
+    </div>
+  </div>
+</BaseLayout>
