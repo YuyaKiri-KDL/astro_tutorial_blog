@@ -13,23 +13,23 @@ const googleMapUrl = `https://maps.google.com/maps/api/js?key=${API_KEY}&v=beta&
 
   <!-- GoogleMapを表示するスクリプト -->
   <script>
-    let map: google.maps.Map;
-    // マップID
-    const MAP_ID = "9fe219b55ef46f25";
-    // Google Mapに表示する地点情報
-    const myLatLng: google.maps.LatLngLiteral = {
-      lat: 34.6945454,
-      lng: 135.1952558,
-    };
-    // 地図のプロパティ
-    const options = {
-      zoom: 15, //地図の縮尺値
-      center: myLatLng, //地図の中心座標
-      mapTypeId: "roadmap", //地図の種類
-      mapId: MAP_ID, // GCPにて作成したmap_ID（高度なマーカーを利用するために必要）
-    };
     // 地図の初期化関数
     const initMap = () => {
+      let map: google.maps.Map;
+      // マップID
+      const MAP_ID = "9fe219b55ef46f25";
+      // Google Mapに表示する地点情報
+      const myLatLng: google.maps.LatLngLiteral = {
+        lat: 34.6945454,
+        lng: 135.1952558,
+      };
+      // 地図のプロパティ
+      const options = {
+        zoom: 15, //地図の縮尺値
+        center: myLatLng, //地図の中心座標
+        mapTypeId: "roadmap", //地図の種類
+        mapId: MAP_ID, // GCPにて作成したmap_ID（高度なマーカーを利用するために必要）
+      };
       // 地図
       map = new google.maps.Map(
         document.getElementById("map") as HTMLElemnt,
